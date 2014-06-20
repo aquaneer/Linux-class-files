@@ -8,12 +8,11 @@ do
                 a) echo "Found the -a option" ;;
                 b) echo "Found the -b option with value $OPTARG" ;;
                 c) echo "Found the -c option with value $OPTARG" ;;
-                \?) echo "Unknown option" ;;
+                \?) echo "$(basename $0): Unknown option" ;;
         esac
-shift
 done
 
-#shift $(($OPTIND - 1))
+shift $(( $OPTIND - 1 ))
 #shift
 # option index is the NEXT option to process
 # we want to shift backward to get the regular arguments

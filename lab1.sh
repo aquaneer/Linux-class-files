@@ -11,7 +11,7 @@ echo -e "Files not in media.xml:\n"
 for ITEM in $LISTMEDIALAB
 do
    FOUND=$(grep "$ITEM" newfile)
-   if [[ -z $FOUND ]]; then        
+   if [[ -z $FOUND ]] ; then        
       echo "$ITEM"
       ((COUNTER++)) 
    fi

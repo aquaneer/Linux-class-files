@@ -1,17 +1,12 @@
 #!/bin/bash
 
-var=$1
 
-if [[ a = a ]]; then
-IFSOLD=$IFS
-IFS=$'\t\n'
+var=~/bin/media
 
-LIST=$(ls -R "$var")
-
-for ITEM in $LIST; do
-echo $ITEM
-done
-
+if [[ -d $var ]]; then
+echo " suceess"
+else
+echo "fail"
 fi
 
-IFS=$IFSOLD
+
